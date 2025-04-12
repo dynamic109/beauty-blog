@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import React from "react";
 import Logo from "@/public/beauty-blog-logo.svg";
 
@@ -24,9 +24,9 @@ const Nav = ({ navItems }: NavProps) => {
             </Link>
           ))}
         </div>
-        <div>
+        <Link href={"/"}>
           <Image src={Logo} alt="beauty blog logo" width={38} height={46} />
-        </div>
+        </Link>
         <div>
           <Button variant={"ghost"} className="text-sm font-normal">
             Contact

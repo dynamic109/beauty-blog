@@ -7,5 +7,6 @@ export type Blog = {
   slug: string;
   image: string;
   url: string;
+  description: PortableTextBlock[];
   content: PortableTextBlock[];
 };
