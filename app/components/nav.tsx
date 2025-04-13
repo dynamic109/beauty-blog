@@ -16,7 +16,7 @@ interface NavProps {
 const Nav = ({ navItems }: NavProps) => {
   return (
     <nav className="mx-6 ">
-      <div className="flex justify-between items-center w-full max-w-[1400px] mx-auto py-6 border-b border-[#333333] text-sm">
+      <div className="flex justify-between items-center w-full max-w-[1400px] mx-auto py-6 border-b border-[#A0A0A0] text-sm">
         <div className="space-x-6">
           {navItems.map((item, index) => (
             <Link className="text-[#333333]" key={index} href={item.href}>

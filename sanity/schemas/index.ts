@@ -1,5 +1,4 @@
-import BeautyBlog from "./project-schema";
-
-const schemas = [BeautyBlog]
+import { FeaturedBlogs, BlogCategories } from "./project-schema"
+const schemas = [FeaturedBlogs, BlogCategories]
 
 export default schemas

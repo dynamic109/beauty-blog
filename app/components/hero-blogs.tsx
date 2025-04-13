@@ -78,7 +78,7 @@ function BlogsPreview() {
                 />
                 <Link
                   href={`/FeaturedBlogs/${blog.slug}`}
-                  className="bg-[#FFB6C1] px-6 py-2 text-base text-[#333333] font-normal rounded-[4px]"
+                  className="bg-[#FFB6C1] px-6 py-2 text-base text-[#333333] font-normal rounded-[4px] flex place-items-center-safe w-fit"
                 >
                   Read more
                 </Link>
@@ -87,7 +87,7 @@ function BlogsPreview() {
                 {blog.image && (
                   <Image
                     width={600}
-                    height={702}
+                    height={802}
                     src={blog.image}
                     alt={blog.name}
                     className="object-cover w-full h-full"

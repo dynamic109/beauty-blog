@@ -32,3 +32,15 @@ export function getFeaturedBlog(slug: string) {
     { slug }
   );
 }
+
+export function getBlogsCategories() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "categories"]{
+    _id,
+    _createdAt,
+    name,
+    "slug": slug.current,
+    "image": image.asset -> url,
+    }`
+  );
+}

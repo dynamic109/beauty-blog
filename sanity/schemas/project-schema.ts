@@ -1,4 +1,4 @@
-const BeautyBlog = {
+const FeaturedBlogs = {
   name: "featuredblogs",
   title: "Featured Blogs",
   type: "document",
@@ -47,4 +47,42 @@ const BeautyBlog = {
   ],
 };
 
-export default BeautyBlog;
+const BlogCategories = {
+  name: "categories",
+  title: "Blog Categories",
+  type: "document",
+  fields: [
+    {
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: { source: "name" },
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "urrl",
+      title: "Url",
+      type: "url",
+    },
+  ],
+};
+
+export { FeaturedBlogs, BlogCategories };
+

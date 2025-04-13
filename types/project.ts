@@ -10,3 +10,11 @@ export type Blog = {
   description: PortableTextBlock[];
   content: PortableTextBlock[];
 };
+
+export type Categories = {
+  _id: string;
+  _createdAt: Date;
+  name: string;
+  slug: string;
+  image: string;
+};
