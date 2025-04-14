@@ -1,4 +1,8 @@
-import { FeaturedBlogs, BlogCategories } from "./project-schema"
-const schemas = [FeaturedBlogs, BlogCategories]
+import {
+  FeaturedBlogs,
+  BlogCategories,
+  TrendingTopics,
+} from "./project-schema";
+const schemas = [FeaturedBlogs, BlogCategories, TrendingTopics];
 
-export default schemas
+export default schemas;

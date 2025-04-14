@@ -29,10 +29,10 @@ const BlogCategories = () => {
     <div className="flex border-t border-[#A0A0A0] py-[45px]">
       <div className="space-y-6 max-w-[604px] w-full h-full pt-12">
         <div className="flex gap-4 items-center mb-12">
-          <div className="swiper-button-prev-custom cursor-pointer">
+          <div className="">
             <Image src="/arrow-02.svg" alt="Previous" width={40} height={40} />
           </div>
-          <div className="swiper-button-next-custom cursor-pointer">
+          <div className="">
             <Image src="/arrow-01.svg" alt="Next" width={40} height={40} />
           </div>
         </div>

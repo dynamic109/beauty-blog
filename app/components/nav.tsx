@@ -15,7 +15,7 @@ interface NavProps {
 
 const Nav = ({ navItems }: NavProps) => {
   return (
-    <nav className="mx-6 ">
+    <nav className="">
       <div className="flex justify-between items-center w-full max-w-[1400px] mx-auto py-6 border-b border-[#A0A0A0] text-sm">
         <div className="space-x-6">
           {navItems.map((item, index) => (

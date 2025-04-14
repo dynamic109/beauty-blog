@@ -6,7 +6,7 @@ import BlogsPreview from "./hero-blogs";
 
 const Hero = () => {
   return (
-    <div className="py-6 px-4">
+    <div className="py-6">
       <BlogsPreview />
     </div>
   );

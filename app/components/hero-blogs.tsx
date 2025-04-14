@@ -31,6 +31,13 @@ function BlogsPreview() {
     fetchBlogs();
   }, []);
 
+  const customComponents = components({
+    h1ClassName: "text-4xl font-bold text-primary mb-6",
+    h2ClassName: "text-3xl font-medium text-secondary mb-4",
+    paragraphClassName: "text-[21px] text-gray-800 leading-relaxed",
+    linkClassName: "text-blue-600 hover:text-blue-800 underline",
+  });
+
   if (isLoading) return <div>Loading...</div>;
 
   return (
@@ -74,7 +81,7 @@ function BlogsPreview() {
                 </h3>
                 <PortableText
                   value={blog.description}
-                  components={components}
+                  components={customComponents}
                 />
                 <Link
                   href={`/FeaturedBlogs/${blog.slug}`}

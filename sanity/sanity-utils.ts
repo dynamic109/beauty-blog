@@ -44,3 +44,20 @@ export function getBlogsCategories() {
     }`
   );
 }
+
+export function getTrendingTopics() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "trendingtopics"]{
+    _id,
+    _createdAt,
+    name,
+    author,
+    time,
+    "slug": slug.current,
+    "image": image.asset->url,
+    url,
+    description,
+    content
+        }`
+  );
+}
