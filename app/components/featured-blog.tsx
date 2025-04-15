@@ -1,3 +1,4 @@
+"use client";
 import { Blog } from "@/types/project";
 import React from "react";
 import { PortableText } from "@portabletext/react";
@@ -8,6 +9,9 @@ const FeaturedBlog = ({ blogData }: any) => {
   if (!blogData) {
     return <div>Loading...</div>;
   }
+
+  const customComponents = components({});
+
   return (
     <div>
       <div className="text-center max-w-[826px] w-full mx-auto space-y-8">
@@ -15,17 +19,21 @@ const FeaturedBlog = ({ blogData }: any) => {
         <h3 className=" text-[64px] font-semibold text-[#333333] leading-20">
           {blogData.name}
         </h3>
-        <PortableText value={blogData.description} components={components} />
+        <PortableText
+          value={blogData.description}
+          components={customComponents}
+        />
       </div>
       <div className="flex justify-center items-center mt-12 h-fit">
         <Image
           src={blogData.image}
           alt={blogData.name}
-          width={640}
+          width={1248}
           height={640}
-          className="object-cover w-full h-full"
+          className="object-cover max-w-[1248px] max-h-[640px] w-full h-full"
         />
       </div>
+      
     </div>
   );
 };

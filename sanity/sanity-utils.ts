@@ -61,3 +61,19 @@ export function getTrendingTopics() {
         }`
   );
 }
+
+export function getTrendingTopic(slug: string) {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "trendingtopics" && slug.current == $slug][0]{
+    _id,
+    _createdAt,
+    name,
+    "slug": slug.current,
+    "image": image.asset->url,
+    url,
+    description,
+    content
+        }`,
+    { slug }
+  );
+}

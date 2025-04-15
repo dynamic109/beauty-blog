@@ -84,7 +84,7 @@ function BlogsPreview() {
                   components={customComponents}
                 />
                 <Link
-                  href={`/FeaturedBlogs/${blog.slug}`}
+                  href={`/featured-blog/${blog.slug}`}
                   className="bg-[#FFB6C1] px-6 py-2 text-base text-[#333333] font-normal rounded-[4px] flex place-items-center-safe w-fit"
                 >
                   Read more

@@ -5,11 +5,13 @@ import { useEffect, useState } from "react";
 import { Trending } from "@/types/project";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import components from "./portable-text";
 import createComponents from "./portable-text";
+import { useRouter } from "next/navigation";
 
 const TrendingTopics = () => {
   const [trendingTopics, setTrendingTopics] = useState<Trending[]>([]);
+
+  const router = useRouter();
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -47,6 +49,7 @@ const TrendingTopics = () => {
       <div className="mt-15 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {trendingTopics.map((trend, index) => (
           <div
+            onClick={() => router.push(`/trending-topic/${trend.slug}`)}
             key={index}
             className=" w-full h-full border border-[#A0A0A0] p-2 rounded-[4px] cursor-pointer hover:scale-[1.01] transition-transform duration-300 ease-in-out"
           >
@@ -64,6 +67,17 @@ const TrendingTopics = () => {
                 value={trend.description}
                 components={customComponents}
               />
+              <div className="border-t border-[#A0A0A0] py-4 flex items-center justify-between">
+                <p className="text-sm text-[#333333] font-normal">
+                  {trend.author} <span className="ml-5">{trend.time} read</span>
+                </p>
+                <Image
+                  src={"/arrow-01.svg"}
+                  alt="arrow"
+                  width={20}
+                  height={7}
+                />
+              </div>
             </div>
           </div>
         ))}
