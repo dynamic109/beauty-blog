@@ -1,5 +1,7 @@
 import React from "react";
 import Nav from "../components/nav";
+import CTASection from "../components/cta-section";
+import Footer from "../components/footer";
 
 const links = [
   { name: "Featured", href: "featured" },
@@ -12,6 +14,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     <main className="bg-[#EAEAEA] min-h-screen px-4 lg:px-6">
       <Nav navItems={links} />
       {children}
+      <CTASection />
+      <Footer />
     </main>
   );
 };
